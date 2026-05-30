@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dashboard</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/Dashbord.css">
+  <script src="../assets/js/Dashbord.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="logo">
+      <h2>FASHION</h2>
+    </div>
+
+    <ul class="menu">
+
+      <li class="active">
+        <a href="#">
+          <i class="fa-solid fa-house"></i>
+          Dashboard
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-box"></i>
+          Products
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-cart-shopping"></i>
+          Orders
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-users"></i>
+          Customers
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-chart-line"></i>
+          Analytics
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-gear"></i>
+          Settings
+        </a>
+      </li>
+
+    </ul>
+
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+
+      <div>
+        <h1>Dashboard</h1>
+        <p>Welcome back 👋</p>
+      </div>
+
+      <div class="top-right">
+
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search...">
+        </div>
+
+        <button id="darkModeBtn">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- CARDS -->
+    <div class="cards">
+
+      <div class="card">
+        <h3>$12,450</h3>
+        <p>Total Revenue</p>
+      </div>
+
+      <div class="card">
+        <h3>1,245</h3>
+        <p>Total Orders</p>
+      </div>
+
+      <div class="card">
+        <h3>320</h3>
+        <p>Products</p>
+      </div>
+
+      <div class="card">
+        <h3>845</h3>
+        <p>Customers</p>
+      </div>
+
+    </div>
+
+    <!-- SALES -->
+    <div class="sales-section">
+
+      <div class="chart-card">
+        <h2>Sales Overview</h2>
+
+        <div class="chart-placeholder">
+          <div class="line"></div>
+        </div>
+      </div>
+
+      <div class="analytics-card">
+
+        <h2>Analytics</h2>
+
+        <div class="analytics-item">
+          <span>Sales</span>
+          <strong>80%</strong>
+        </div>
+
+        <div class="progress">
+          <div class="progress-bar blue"></div>
+        </div>
+
+        <div class="analytics-item">
+          <span>Orders</span>
+          <strong>65%</strong>
+        </div>
+
+        <div class="progress">
+          <div class="progress-bar pink"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-card">
+
+      <h2>Recent Orders</h2>
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Customer</th>
+            <th>Status</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        
+
+        <tbody>
+
+          <tr>
+            <td>Oversize Hoodie</td>
+            <td>Sovanreach</td>
+            <td>
+              <span class="status completed">
+                Completed
+              </span>
+            </td>
+            <td>$45</td>
+          </tr>
+
+          <tr>
+            <td>Luxury Watch</td>
+            <td>Dara</td>
+            <td>
+              <span class="status pending">
+                Pending
+              </span>
+            </td>
+            <td>$120</td>
+          </tr>
+          <tr>
+            <td>Red Dres</td>
+            <td>sor</td>
+            <td>
+              <span class="status pending">
+                Pending
+              </span>
+            </td>
+            <td>$85</td>
+          </tr>
+          <tr>
+            <td>Phone case</td>
+            <td>Houyly</td>
+            <td>
+              <span class="status completed">
+                completed
+              </span>
+            </td>
+            <td>$20</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </main>
+
+</div>
+
+<!-- JS -->
+<script src="../assets/js/Dashbord.js"></script>
+
+</body>
+</html>

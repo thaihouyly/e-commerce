@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Page — Vogue Store</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/aboutas/topbar.css">
+<link rel="stylesheet" href="/Product/cart.css">
+<link rel="stylesheet" href="/Product/Rating.css">
+<link rel="stylesheet" href="/Product/Related.css">
+<link rel="stylesheet" href="/aboutas/footer.css">
+<link rel="stylesheet" href="/aboutas/instagram.css">
+<link rel="stylesheet" href="/Product/Product.css">
+<link rel="stylesheet" href="/Product/Tabs-Section.css">
+</head>
+</head>
+<body>
+
+<!-- NAV -->
+<div id="nav"></div>
+<script>
+  // Load nav component
+  fetch('/components/navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading navbar:', error));
+</script>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="#">Home</a><span>/</span>
+  <a href="/pages/about.html">About as</a><span>/</span>
+  <a href="#">Tops</a><span>/</span>
+  Under Armour Training Jacket
+</div>
+
+<!-- PRODUCT -->
+<div class="product-container">
+
+  <!-- Thumbnails -->
+  <div class="thumbnails">
+    <div class="thumb active" onclick="setThumb(0, this)">
+      <div class="thumb-placeholder">👕</div>
+    </div>
+    <div class="thumb" onclick="setThumb(1, this)">
+      <div class="thumb-placeholder">👕</div>
+    </div>
+    <div class="thumb" onclick="setThumb(2, this)">
+      <div class="thumb-placeholder">👕</div>
+    </div>
+    <div class="thumb" onclick="setThumb(3, this)">
+      <div class="thumb-placeholder">👕</div>
+    </div>
+  </div>
+
+  <!-- Main Image -->
+  <div class="main-image-wrap">
+    <div class="main-image" id="mainImg">
+      <div class="main-image-placeholder">👕</div>
+      <div class="img-badge sale">SALE</div>
+      <button class="wishlist-btn" id="mainWish" onclick="toggleWish(this)" aria-label="Add to wishlist">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </button>
+    </div>
+    <div class="img-nav">
+      <div class="img-dot active" onclick="setThumb(0)"></div>
+      <div class="img-dot" onclick="setThumb(1)"></div>
+      <div class="img-dot" onclick="setThumb(2)"></div>
+      <div class="img-dot" onclick="setThumb(3)"></div>
+    </div>
+    <p class="zoom-hint">Hover to zoom</p>
+  </div>
+
+  <!-- Details -->
+  <div class="product-details">
+    <p class="product-brand">Under Armour</p>
+    <h1 class="product-name">Training Stretch Woven Half Zip Jacket</h1>
+
+    <div class="rating-row">
+      <div class="stars">
+        <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg class="star empty" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <span class="rating-text">4.0</span>
+      <span class="rating-link" onclick="document.querySelector('[data-tab=reviews]').click()">42 reviews</span>
+    </div>
+
+    <div class="price-row">
+      <span class="price-current">$200</span>
+      <span class="price-old">$260</span>
+      <span class="price-tag">23% OFF</span>
+    </div>
+
+    <!-- Color -->
+    <div class="option-group">
+      <div class="option-label">Color — <span id="colorName">Desert Sand</span></div>
+      <div class="color-options">
+        <div class="color-swatch active" style="background:#c8bdb4" title="Desert Sand" onclick="selectColor(this,'Desert Sand')"></div>
+        <div class="color-swatch" style="background:#d14a2e" title="Crimson" onclick="selectColor(this,'Crimson')"></div>
+        <div class="color-swatch" style="background:#1a1a1a" title="Onyx Black" onclick="selectColor(this,'Onyx Black')"></div>
+        <div class="color-swatch" style="background:#3d5a80" title="Navy" onclick="selectColor(this,'Navy')"></div>
+      </div>
+    </div>
+
+    <!-- Size -->
+    <div class="option-group">
+      <div class="option-label">
+        Size — <span id="sizeName">M</span>
+        <span class="size-guide" onclick="document.querySelector('.modal-overlay').classList.add('open')">Size guide</span>
+      </div>
+      <div class="size-options">
+        <button class="size-btn unavailable">XS</button>
+        <button class="size-btn" onclick="selectSize(this,'S')">S</button>
+        <button class="size-btn active" onclick="selectSize(this,'M')">M</button>
+        <button class="size-btn" onclick="selectSize(this,'L')">L</button>
+        <button class="size-btn" onclick="selectSize(this,'XL')">XL</button>
+        <button class="size-btn" onclick="selectSize(this,'XXL')">XXL</button>
+      </div>
+    </div>
+
+    <!-- Quantity -->
+    <div class="qty-row">
+      <div class="qty-ctrl">
+        <button class="qty-btn" onclick="adjQty(-1)">−</button>
+        <input class="qty-val" id="qtyVal" value="1" readonly>
+        <button class="qty-btn" onclick="adjQty(1)">+</button>
+      </div>
+      <span class="stock-note stock-low">Only 4 left in stock</span>
+    </div>
+
+    <button class="cta-add" onclick="addToCart()">Add to Cart</button>
+    <button class="cta-wish" onclick="toggleWish(document.getElementById('mainWish'))">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      Add to Wishlist
+    </button>
+
+    <!-- Perks -->
+    <div class="perks">
+      <div class="perk">
+        <div class="perk-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a07d52" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <div class="perk-text"><p>Free shipping</p><span>On orders over $50</span></div>
+      </div>
+      <div class="perk">
+        <div class="perk-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a07d52" stroke-width="1.5"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+        </div>
+        <div class="perk-text"><p>30-day returns</p><span>Easy return policy</span></div>
+      </div>
+      <div class="perk">
+        <div class="perk-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a07d52" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="perk-text"><p>Secure payment</p><span>100% protected</span></div>
+      </div>
+      <div class="perk">
+        <div class="perk-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a07d52" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.29h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16l.19.92z"/></svg>
+        </div>
+        <div class="perk-text"><p>24/7 support</p><span>Dedicated help desk</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TABS -->
+<div id="Tab"></div>
+<script>
+  // Load tabs component
+  fetch('/components/product-Tab.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('Tab').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading tabs:', error)); 
+</script>
+
+<!-- RELATED --> 
+ <div class="related-section">
+  <h2 class="section-title">Related Products</h2>
+  <div class="related-grid">
+    <div class="related-card">
+      <div class="related-img">
+        👕
+        <button class="related-wish" aria-label="Add to wishlist">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+      </div>
+      <p class="related-brand">Under Armour</p>
+      <p class="related-name">Slim Runners Pullover Long Sleeve</p>
+      <p class="related-price">$200</p>
+    </div>
+    <div class="related-card">
+      <div class="related-img">
+        👕
+        <button class="related-wish" aria-label="Add to wishlist">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+      </div>
+      <p class="related-brand">Under Armour</p>
+      <p class="related-name">Slim Runners Pullover Long Sleeve</p>
+      <p class="related-price">$190</p>
+    </div>
+    <div class="related-card">
+      <div class="related-img">
+        👕
+        <button class="related-wish" aria-label="Add to wishlist">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+      </div>
+      <p class="related-brand">North Face</p>
+      <p class="related-name">Storm Fleece Half Zip Jacket</p>
+      <p class="related-price">$220</p>
+    </div>
+    <div class="related-card">
+      <div class="related-img">
+        👕
+        <button class="related-wish" aria-label="Add to wishlist">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+      </div>
+      <p class="related-brand">Under Armour</p>
+      <p class="related-name">Stretch Woven Bomber Training Jacket</p>
+      <p class="related-price">$210</p>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- FOOTER -->
+<div id="footer"></div>
+<script>
+  // Load footer component
+  fetch('/components/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading footer:', error));
+</script>
+
+<!-- SIZE GUIDE MODAL -->
+<div class="modal-overlay" onclick="if(event.target===this) this.classList.remove('open')">
+  <div class="modal">
+    <button class="modal-close" onclick="document.querySelector('.modal-overlay').classList.remove('open')">✕</button>
+    <h3>Size Guide</h3>
+    <table>
+      <thead>
+        <tr><th>Size</th><th>Chest (in)</th><th>Waist (in)</th><th>Hip (in)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>S</td><td>34–36</td><td>28–30</td><td>34–36</td></tr>
+        <tr><td>M</td><td>38–40</td><td>32–34</td><td>38–40</td></tr>
+        <tr><td>L</td><td>42–44</td><td>36–38</td><td>42–44</td></tr>
+        <tr><td>XL</td><td>46–48</td><td>40–42</td><td>46–48</td></tr>
+        <tr><td>XXL</td><td>50–52</td><td>44–46</td><td>50–52</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+<script src="../assets/js/product.js"></script>
+
+</body>
+</html>
+
+ 

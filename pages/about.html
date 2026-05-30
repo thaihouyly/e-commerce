@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Vogue – About Us</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/aboutas/about.css"/>
+<link rel="stylesheet" href="/aboutas/instagram.css"/>
+<link rel="stylesheet" href="/aboutas/product.css"/>
+<link rel="stylesheet" href="/aboutas/teamgrid.css"/>
+<link rel="stylesheet" href="../aboutas/footer.css">
+<link rel="stylesheet" href="/aboutas/topbar.css">
+
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div id = "topbar"></div>
+<script>
+  // Load topbar component
+  fetch('/components/navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('topbar').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading navbar:', error));
+</script>
+<div class="breadcrumb">
+  <a href="/pages/about.html"      class="btn-ghost-white"> Home</a>
+  <span>/</span>
+  <span style="color:var(--black)"> <a href="/pages/contact.html">Contact Us</a></span>
+</div>
+
+<!-- HERO -->
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Founded With a Mission</h1>
+  <p>Simple, stylish and locally-crafted apparel since 1994</p>
+</section>
+
+<!-- TEAM PHOTO -->
+<div class="team-photo-wrap ">
+  <div style="width:100%;height:420px;background:linear-gradient(135deg,#c9d4d4 0%,#b8c4c4 40%,#a8b8b8 100%);
+  display:flex;align-items:flex-end;justify-content:center;padding-bottom:32px;">
+    <svg width="340" height="220" viewBox="0 0 340 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- 5 stylised silhouettes -->
+    
+    </svg>
+  </div>
+  <div class="team-photo-overlay"></div>
+</div>
+
+<!-- MISSION -->
+<div class="mission ">
+  <p>Founded in 1984 by designer Chantelle West, we've always believed in the power of locally made goods.
+     The quality of the craftsmanship and the local artisans we employ are what make Luxette our mission in life.</p>
+</div>
+
+<div class="divider"></div>
+
+<!-- MEET OUR TEAM -->
+<section class="team-section ">
+  <div class="section-heading">
+    <h2>Meet Our Team</h2>
+  </div>
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="product-img-wrap" style="aspect-ratio:3/4;
+      background:linear-gradient(160deg,#2a2a2a 0%,#444 100%);">
+        <svg width="100%" height="100%" viewBox="0 0 200 260" fill="none">
+          <ellipse cx="100" cy="85" rx="42" ry="50" fill="#666"/>
+          <rect x="50" y="130" width="100" height="130" rx="20" fill="#555"/>
+        </svg>
+      </div>
+      <h3>Chantelle West</h3>
+      <p>CEO &amp; Founder</p>
+    </div>
+    <div class="team-card">
+      <div class="product-img-wrap" style="aspect-ratio:3/4;
+      background:linear-gradient(160deg,#1a3a4a 0%,#2d5a6a 100%);">
+        <svg width="100%" height="100%" viewBox="0 0 200 260" fill="none">
+          <ellipse cx="100" cy="85" rx="42" ry="50" fill="#5a8a9a"/>
+          <rect x="50" y="130" width="100" height="130" rx="20" fill="#4a7a8a"/>
+        </svg>
+      </div>
+      <h3>Chantelle West</h3>
+      <p>CEO &amp; Founder</p>
+    </div>
+    <div class="team-card">
+      <div class="product-img-wrap" style="aspect-ratio:3/4;
+      background:linear-gradient(160deg,#4a2a1a 0%,#7a4a2a 100%);">
+        <svg width="100%" height="100%" viewBox="0 0 200 260" fill="none">
+          <ellipse cx="100" cy="85" rx="42" ry="50" fill="#aa7a5a"/>
+          <rect x="50" y="130" width="100" height="130" rx="20" fill="#8a5a3a"/></svg>
+      </div>
+      <h3>Chantelle West</h3>
+      <p>CEO &amp; Founder</p>
+    </div>
+  </div>
+</section>
+
+<!-- DECORATIVE LEAF BAND -->
+<div class="deco-band">
+  <div class="deco-band-inner" id="leafBand">
+    <!-- repeated leaf SVGs -->
+  </div>
+</div>
+
+<!-- VISIT OUR STORE / PRODUCTS -->
+<section class="store-section ">
+  <div class="section-heading">
+    <h2>Visit Our Store</h2>
+  </div>
+  <div class="products-carousel">
+    <button class="carousel-btn prev" id="prevBtn" aria-label="Previous">
+      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div class="products-track" id="productsTrack">
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <div style="width:100%;height:100%;
+          background:linear-gradient(160deg,#e8e0d8 0%,#d0c8be 100%);
+          display:flex;align-items:center;justify-content:center;">
+            <svg width="80" height="120" viewBox="0 0 80 120" fill="none">
+              <ellipse cx="40" cy="25" rx="18" ry="22" fill="#c8beb4"/>
+            </svg>
+          </div>
+        </div>
+        <h4>Under Armour Training stretch woven half zip jacket in white</h4>
+        <div class="price">$200</div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <div style="width:100%;height:100%;
+          background:linear-gradient(160deg,#c8d4e0 0%,#a8b8cc 100%);
+          display:flex;align-items:center;justify-content:center;">
+          </div>
+        </div>
+        <h4>Swim Jammers Endurance Long Racing Training Swimsuit</h4>
+        <div class="price">$200</div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <div style="width:100%;height:100%;
+          background:linear-gradient(160deg,#2a2a2a 0%,#444 100%);
+          display:flex;align-items:center;justify-content:center;">
+            <svg width="80" height="120" viewBox="0 0 80 120" fill="none">
+              <ellipse cx="40" cy="25" rx="18" ry="22" fill="#666"/>
+            </svg>
+          </div>
+        </div>
+        <h4>Swim Jammers Endurance Long Racing Training Swimsuit</h4>
+        <div class="price">$200</div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <div style="width:100%;height:100%;
+          background:linear-gradient(160deg,#d8cec0 0%,#c0b0a0 100%);
+          display:flex;align-items:center;justify-content:center;">
+            <svg width="80" height="120" viewBox="0 0 80 120" fill="none">
+              <ellipse cx="40" cy="25" rx="18" ry="22" fill="#b8a898"/>
+            </svg>
+          </div>
+        </div>
+        <h4>Funny Shorts with Mesh Lining Swimwear Bathing Suits</h4>
+        <div class="price">$200</div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap">g
+          <div style="width:100%;height:100%;
+          background:linear-gradient(160deg,#e0d4c8 0%,#c8b8aa 100%);
+          display:flex;align-items:center;justify-content:center;">
+            <svg width="80" height="120" viewBox="0 0 80 120" fill="none">
+              <ellipse cx="40" cy="25" rx="18" ry="22" fill="#c0a898"/>
+            </svg>
+          </div>
+        </div>
+        <h4>Classic Linen Blazer Summer Collection</h4>
+        <div class="price">$200</div>
+      </div>
+    </div>
+    <button class="carousel-btn next" id="nextBtn" aria-label="Next">
+      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+  
+</section>
+
+<!-- INSTAGRAM -->
+ 
+
+<!-- FOOTER -->
+
+<div id="footer"> </div>
+<script>
+  // Load footer component
+  fetch('/components/footer.html')
+    .then(response => response.text())
+    .then(data => {
+     document.querySelectorAll(".insta-tile").length;
+      document.getElementById('footer').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading footer:', error));
+</script>
+      
+
+<script src="/Js/about.js"></script>
+</body>
+</html>

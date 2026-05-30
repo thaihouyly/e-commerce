@@ -1,0 +1,92 @@
+
+
+/* ── RELATED PRODUCTS ─────────────────────────────────────── */
+.related-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px 80px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 28px;
+  color: var(--black);
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.related-card {
+  cursor: pointer;
+}
+
+.related-img {
+  aspect-ratio: 3 / 4;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--gray-50);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: var(--gray-200);
+  transition: transform 0.35s ease;
+  position: relative;
+}
+
+.related-card:hover .related-img {
+  transform: scale(1.02);
+}
+
+.related-card:nth-child(1) .related-img { background: #ede6dc; color: #c8bdb0; }
+.related-card:nth-child(2) .related-img { background: #e2dbd2; color: #c0b8ae; }
+.related-card:nth-child(3) .related-img { background: #d8d0c8; color: #b8b0a8; }
+.related-card:nth-child(4) .related-img { background: #cec6be; color: #b0a8a0; }
+
+.related-brand {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 3px;
+}
+
+.related-name {
+  font-size: 13px;
+  color: var(--black);
+  margin-bottom: 4px;
+}
+
+.related-price {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.related-wish {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.related-card:hover .related-wish {
+  opacity: 1;
+}

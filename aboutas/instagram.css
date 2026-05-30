@@ -1,0 +1,31 @@
+.instagram-section{
+    padding:40px;
+    text-align:center;
+}
+
+.insta-handle{
+    font-size:11px;
+    letter-spacing:.2em;
+    color:#888;
+    margin-bottom:30px;
+}
+
+.instagram-section{
+    padding:40px;
+}
+
+.insta-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:5px;
+}
+
+.insta-tile{
+    height:180px;
+}
+
+@media(max-width:768px){
+    .insta-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+}

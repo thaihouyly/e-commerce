@@ -1,0 +1,42 @@
+/* CATEGORIES */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cat-item {
+  border-right: 1px solid #ebe8e3;
+}
+
+.cat-img {
+  height: 260px;
+}
+
+.cat-label {
+  padding: 20px;
+  background: white;
+}
+
+.cat-label .tag {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+}
+
+.cat-label h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-top: 6px;
+}
+
+.cat-jeans .cat-img {
+  background: linear-gradient(135deg, #c4cdd4, #8fa0ae);
+}
+
+.cat-shirts .cat-img {
+  background: linear-gradient(135deg, #d4cfc9, #b5ada5);
+}
+
+.cat-footwear .cat-img {
+  background: linear-gradient(135deg, #e0d9cf, #c2b9ad);
+}

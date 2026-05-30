@@ -1,0 +1,173 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ── CSS VARIABLES ────────────────────────────────────────── */
+:root {
+  --black: #111110;
+  --white: #fafaf8;
+  --gray-50: #f5f5f3;
+  --gray-100: #ebebea;
+  --gray-200: #d6d6d4;
+  --gray-400: #a0a09e;
+  --gray-600: #6b6b69;
+  --accent: #c8a882;
+  --accent-dark: #a07d52;
+  --red: #c94040;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+  --transition: 0.25s ease;
+}
+
+/* ── RESET ────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--white);
+  color: var(--black);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ── NAVIGATION ───────────────────────────────────────────── */
+
+
+
+
+/* ── INSTAGRAM SECTION ────────────────────────────────────── */
+
+
+/* ── TOAST ────────────────────────────────────────────────── */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: var(--black);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 999;
+  white-space: nowrap;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ── SIZE GUIDE MODAL ─────────────────────────────────────── */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.open {
+  display: flex;
+}
+
+.modal {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 32px;
+  max-width: 480px;
+  width: 90%;
+}
+
+.modal h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.modal table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.modal th {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--gray-400);
+  font-weight: 400;
+}
+
+.modal td {
+  padding: 8px;
+  border-bottom: 1px solid var(--gray-50);
+  color: var(--gray-600);
+}
+
+.modal-close {
+  float: right;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--gray-400);
+  margin-top: -8px;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────────── */
+@media (max-width: 900px) {
+  nav {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .breadcrumb {
+    padding: 12px 20px;
+  }
+
+  .product-container {
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: auto auto;
+    padding: 0 20px 40px;
+  }
+
+  .main-image-wrap {
+    grid-column: 2;
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+
+  .product-details {
+    grid-column: 1 / -1;
+  }
+
+  .tabs-section,
+  .related-section {
+    padding: 0 20px 40px;
+  }
+
+  .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .insta-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

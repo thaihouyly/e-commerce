@@ -1,0 +1,147 @@
+:root {
+  --cream: #faf9f7;
+  --charcoal: #1a1a1a;
+  --warm-gray: #8c8880;
+  --blush: #f2cfc4;
+  --sand: #e8e0d4;
+  --accent: #c8a882;
+  --white: #ffffff;
+  --red: #d94f3d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+  background: var(--cream);
+  color: var(--charcoal);
+}
+
+/* TOP BAR */
+.top-bar {
+  background: var(--charcoal);
+  color: #ccc;
+  text-align: center;
+  padding: 8px;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+/* NAV */
+nav {
+  height: 62px;
+  padding: 0 40px;
+  background: var(--white);
+  border-bottom: 1px solid #ebe8e3;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.nav-left a,
+.nav-right a {
+  text-decoration: none;
+  color: var(--charcoal);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  text-decoration: none;
+  color: var(--charcoal);
+  font-weight: 700;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 32px;
+  background: var(--charcoal);
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+}
+
+.model-silhouette {
+  width: 65%;
+  height: 85%;
+  background: linear-gradient(
+    180deg,
+    #e8c9b8 0%,
+    #d4a89a 100%
+  );
+
+  border-radius: 180px 180px 0 0;
+}
+
+.brand {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+}
+
+.price {
+  font-weight: 600;
+}
+
+.old {
+  text-decoration: line-through;
+  color: var(--warm-gray);
+  font-size: 12px;
+}
+
+.stars {
+  color: var(--accent);
+  margin-top: 5px;
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+
+  padding: 4px 10px;
+  font-size: 9px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.new {
+  background: var(--charcoal);
+}
+
+.sale {
+  background: var(--red);
+}
+
+.p1 .product-img {
+  background: linear-gradient(160deg, #d8cdc0, #b5a89a);
+}
+
+.p2 .product-img {
+  background: linear-gradient(160deg, #c4cdd4, #8a9eac);
+}
+
+.p3 .product-img {
+  background: linear-gradient(160deg, #d4cfc9, #c0b5ad);
+}
+
+.p4 .product-img {
+  background: linear-gradient(160deg, #e0d5c5, #c8b99e);
+}
